@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ActivityDetail from './components/ActivityDetail.jsx';
+import ActivityFeed from './components/ActivityFeed.jsx';
 
 import Header from './Header.jsx';
 
@@ -7,7 +9,11 @@ const App = () => {
   return (
     <div className='container'>
       <Header/>
-      <div className="container-view">Some activities should be here</div>
+      <div className="container-view">
+        Some activities should be here
+        <ActivityFeed />
+        <ActivityDetail />
+      </div>
     </div>
   );
 };
