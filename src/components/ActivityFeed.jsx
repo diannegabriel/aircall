@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import ActivityDetail from './ActivityDetail.jsx';
 
 const ActivityFeed = () => {
   return (
-    <p>I am ActivityFeed</p>
+    <Fragment>
+      <p>I am ActivityFeed</p>
+      <ActivityDetail />
+    </Fragment>
   )
 }
 
-export default ActivityFeed;
+export default ActivityFeed; 
