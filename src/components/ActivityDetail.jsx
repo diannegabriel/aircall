@@ -6,11 +6,11 @@ const ActivityDetail = ({ activities, activity }) => {
 
   let icon = '';
   if (activity.call_type === "missed") {
-    icon=<span class="iconify" data-icon="fluent:call-dismiss-20-filled" style={{color: '#BA2800'}} data-width="25" data-height="25"></span>
+    icon=<span className="iconify" data-icon="fluent:call-dismiss-20-filled" style={{color: '#BA2800'}} data-width="25" data-height="25"></span>
   } else if (activity.call_type === "answered") {
-    icon=<span class="iconify" data-icon="fluent:call-checkmark-24-filled" style={{color: 'green'}}  data-width="25" data-height="25"></span>
+    icon=<span className="iconify" data-icon="fluent:call-checkmark-24-filled" style={{color: 'green'}}  data-width="25" data-height="25"></span>
   } else if (activity.call_type === "voicemail") {
-    icon=<span class="iconify" data-icon="fa-solid:voicemail" style={{color: '#14379F'}} data-width="25" data-height="25"></span>
+    icon=<span className="iconify" data-icon="fa-solid:voicemail" style={{color: '#14379F'}} data-width="25" data-height="25"></span>
   }
 
   return (

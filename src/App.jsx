@@ -9,6 +9,7 @@ const App = () => {
   const [activities, setActivities] = useState([]);
   const [status, setStatus] = useState(0);
   const [filteredActivities, setFilteredActivities] = useState([]);
+  const [archived, setArchived] = useState();
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities")
     .then(res => {
@@ -46,6 +47,8 @@ const App = () => {
         setActivities={setActivities}
         setStatus={setStatus}
         filteredActivities={filteredActivities}
+        archived={archived}
+        setArchived={setArchived}
       />
       </div>
     </div>

@@ -9,18 +9,18 @@ const ActivityFeed = ({ activities, setActivities, setStatus, filteredActivities
   const handleStatusChange = (e) => {
     setStatus(e);
   }
-  // console.log(filteredActivities)
+  const handleArchiveCall = (e) => {
+    
+  }
   const allActivities = filteredActivities.map((activity) => {
     return (
       <ActivityDetail
         key={activity.id}
         activity={activity}
         activities={activities}
-        setActivities={setActivities}
       />
     );
   });
-  console.log(allActivities);
   return (
     <Tabs onSelect={handleStatusChange}>
       <TabList>
