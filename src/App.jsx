@@ -20,12 +20,6 @@ const App = () => {
     const handleFilter = () => {
       switch (status) {
         case 1:
-          // Missed calls
-          setFilteredActivities(
-            activities.filter((activity) => activity.call_type === "missed")
-          );
-          break;
-        case 2:
           // Archived calls
           setFilteredActivities(
             activities.filter((activity) => activity.is_archived === true)

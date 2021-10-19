@@ -9,8 +9,8 @@ const ActivityDetail = ({ activities, activity, archived, setArchived }) => {
         is_archived: !activity.is_archived
       })
       .then((res) => {
-        console.log(res.data);
-        setArchived(res.data.is_archived)
+        console.log(res.data.is_archived);
+        // setArchived(res.data.is_archived)
       });
   };
   let icon = "";
