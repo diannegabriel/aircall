@@ -14,8 +14,7 @@
   "dependencies": {
     "axios": "^0.23.0",
     "react": "16.7.0-alpha.0 - next",
-    "react-dom": "16.7.0-alpha.0 - next",
-    "sass": "^1.43.2"
+    "react-dom": "16.7.0-alpha.0 - next"
   },
   "devDependencies": {
     "babel-core": "6.26.*",

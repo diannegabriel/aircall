@@ -1,0 +1,14 @@
+.archive-calls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.archive-icon {
+  padding: 15px 10px 15px 15px;
+}
