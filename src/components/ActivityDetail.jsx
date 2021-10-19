@@ -6,10 +6,11 @@ const ActivityDetail = ({ activities, activity, archived, setArchived }) => {
   const handleArchiveCall = () => {
     axios
       .post(`https://aircall-job.herokuapp.com/activities/${activity.id}`, {
-        is_archived: true
+        is_archived: !activity.is_archived
       })
       .then((res) => {
         console.log(res.data);
+        setArchived(res.data.is_archived)
       });
   };
   let icon = "";
