@@ -1,7 +1,40 @@
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 6px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  color: rgb(122, 122, 122);
+  font-size: 0.9em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
 .call-detail {
   border: 1px solid #ccc;
   border-radius: 15px;
-  padding: 15px 5px 15px 20px;
+  padding: 15px 5px 15px 15px;
   display: flex;
   flex-direction: row;
+}
+
+.missed-call-icon {
+  padding-right: 10px;
+  align-self: center;
+}
+
+.missed-call-info {
+  flex-basis: 70%;
+}
+
+.missed-call-time {
+  align-self: center;
+  color: rgb(122, 122, 122);
 }

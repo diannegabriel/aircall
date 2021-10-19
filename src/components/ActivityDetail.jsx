@@ -22,11 +22,12 @@ const ActivityDetail = () => {
         <span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
       </div>
       <div className="missed-call-info">
-        <p>From: {activity[0].from}</p>
-        <p>tried to call on {activity[0].via}</p>
+        <h3>{activity[0].from}</h3>
+        <h4>tried to call on <strong>{activity[0].via}</strong></h4>
       </div>
       <div className="missed-call-time">
-        <p>{activity[0].created_at}</p>
+        {/* <p>{activity[0].created_at}</p> */}
+        <p>12:34 PM</p>
       </div>
       {/* <p>Number of calls: {activity.length}</p> */}
       {/* <p>Call type: {activity[0].call_type}</p> */}
