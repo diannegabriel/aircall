@@ -20,6 +20,28 @@
 }
 
 #app .container-view {
-  padding: 20px;
+  margin-top: 5px;
+  /* padding: 0px 20px 20px 20px; */
+  background: rgb(248, 248, 248);
 }
 
+#app .react-tabs {
+  background: rgb(248, 248, 248);
+}
+
+#app .react-tabs__tab-list {
+  border-bottom: 1px solid rgb(230, 230, 230);
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#app .react-tabs__tab--selected {
+  background: rgb(248, 248, 248);
+  border-color: rgb(230, 230, 230);
+}
+
+#app .react-tabs__tab-panel--selected {
+  background: rgb(248, 248, 248);
+}
