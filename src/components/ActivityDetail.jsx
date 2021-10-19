@@ -17,13 +17,6 @@ const ActivityDetail = ({ activities, activity }) => {
         {/* <p>{activities[0].created_at}</p> */}
         <p>12:34 PM</p>
       </div>
-      {/* <p>Number of calls: {activities.length}</p> */}
-      {/* <p>Call type: {activities[0].call_type}</p> */}
-      {/* <p>Direction: {activities[0].direction}</p> */}
-      {/* <p>Duration: {activities[0].duration}</p> */}
-      {/* <p>ID: {activities[0].id}</p> */}
-      {/* <p>Archived?: {activities[0].is_archived}</p> */}
-      {/* <p>To: {activities[0].to}</p> */}
     </div>
   )
 }
