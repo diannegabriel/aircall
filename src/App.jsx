@@ -8,7 +8,7 @@ import Header from './Header.jsx';
 const App = () => {
   const [activities, setActivities] = useState([]);
   const [status, setStatus] = useState(0);
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  const [filteredActivities, setFilteredActivities] = useState([]);
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities")
     .then(res => {
@@ -23,14 +23,17 @@ const App = () => {
         case 1:
           // Missed calls
           console.log("missed calls")
+          setFilteredActivities(activities.filter(activity => activity.call_type === "missed"))
           break;
         case 2:
-          // Archived calls
+            // Archived calls
           console.log("archived calls")
+          setFilteredActivities(activities.filter(activity => activity.is_archived === true))
           break;
         default:
           // All Calls
           console.log("all calls")
+          setFilteredActivities(activities);
           break;
       }
     }
@@ -45,6 +48,7 @@ const App = () => {
         activities={activities}
         setActivities={setActivities}
         setStatus={setStatus}
+        filteredActivities={filteredActivities}
       />
       </div>
     </div>

@@ -1,19 +1,11 @@
 import React from "react";
 import '../css/ActivityDetail.css'
 
-const ActivityDetail = ({ activities }) => {
-  // console.log(activities)
-  // const handleActivities = () => {
-  //   setActivities(activities.map((activity) => {
-  //     // console.log(activity)
-  //     return activity
-  //   }));
-  // }
+const ActivityDetail = ({ activities, activity }) => {
   if (!activities) return null;
 
   return (
     <div className="call-detail">
-      {/* I am ActivityDetail inside ActivityFeed */}
       <div className="missed-call-icon">
         <span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
       </div>
