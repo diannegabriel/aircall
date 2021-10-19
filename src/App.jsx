@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 
 import ActivityFeed from './components/ActivityFeed.jsx';
 import Header from './Header.jsx';
@@ -13,19 +11,25 @@ const App = () => {
     <div className='container'>
       <Header/>
       <div className="container-view">
-        <Tabs>
+      <ActivityFeed />
+        {/* <Tabs>
           <TabList>
-            <Tab>Activity</Tab>
+            <Tab>Recent Activities</Tab>
             <Tab>Archived</Tab>
+            <Tab>All Calls</Tab>
           </TabList>
 
           <TabPanel>
             <ActivityFeed />
+            <h2>Any content 1</h2>
           </TabPanel>
           <TabPanel>
             <h2>Any content 2</h2>
           </TabPanel>
-        </Tabs>
+          <TabPanel>
+            <h2>Any content 3</h2>
+          </TabPanel>
+        </Tabs> */}
       </div>
     </div>
   );
