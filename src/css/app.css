@@ -21,12 +21,11 @@
 
 #app .container-view {
   margin-top: 5px;
-  /* padding: 0px 20px 20px 20px; */
-  background: rgb(248, 248, 248);
+  background: rgb(251, 251, 251);
 }
 
 #app .react-tabs {
-  background: rgb(248, 248, 248);
+  background: rgb(251, 251, 251);
 }
 
 #app .react-tabs__tab-list {
@@ -39,7 +38,7 @@
 }
 
 #app .react-tabs__tab--selected {
-  background: rgb(248, 248, 248);
+  background: rgb(251, 251, 251);
   border-color: rgb(230, 230, 230);
   font-weight: bold;
 }

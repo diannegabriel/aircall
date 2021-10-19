@@ -25,6 +25,7 @@ h4 {
   flex-direction: row;
   margin-bottom: 10px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .missed-call-icon {

@@ -22,19 +22,15 @@ const App = () => {
       switch(status){
         case 1:
           // Missed calls
-          console.log("missed calls")
           setFilteredActivities(activities.filter(activity => activity.call_type === "missed"))
           break;
         case 2:
-            // Archived calls
-          console.log("archived calls")
+          // Archived calls
           setFilteredActivities(activities.filter(activity => activity.is_archived === true))
           break;
         default:
-            // All Calls
-          console.log("recent activities")
+          // Recent activities
           setFilteredActivities(activities.filter(activity => activity.is_archived === false))
-          // setFilteredActivities(activities);
           break;
       }
     }
