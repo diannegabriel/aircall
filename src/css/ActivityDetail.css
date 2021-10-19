@@ -31,10 +31,15 @@ h4 {
 }
 
 .missed-call-info {
-  flex-basis: 70%;
+  flex-basis: 68%;
+  background-image: linear-gradient(to bottom, rgb(121, 121, 121) 10%, rgba(121, 121, 121, 0) 0%);
+  background-position: right;
+  background-size: 1px 8px;
+  background-repeat: repeat-y;
 }
 
 .missed-call-time {
   align-self: center;
   color: rgb(122, 122, 122);
+  padding-left: 5px
 }
