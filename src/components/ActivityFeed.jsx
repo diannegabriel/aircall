@@ -24,7 +24,7 @@ const ActivityFeed = ({ activities, setActivities, setStatus, filteredActivities
   return (
     <Tabs onSelect={handleStatusChange}>
       <TabList>
-        <Tab>All Calls</Tab>
+        <Tab>Recent Activity</Tab>
         <Tab>Missed</Tab>
         <Tab>Archived</Tab>
       </TabList>

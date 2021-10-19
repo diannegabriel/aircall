@@ -31,9 +31,10 @@ const App = () => {
           setFilteredActivities(activities.filter(activity => activity.is_archived === true))
           break;
         default:
-          // All Calls
-          console.log("all calls")
-          setFilteredActivities(activities);
+            // All Calls
+          console.log("recent activities")
+          setFilteredActivities(activities.filter(activity => activity.is_archived === false))
+          // setFilteredActivities(activities);
           break;
       }
     }
