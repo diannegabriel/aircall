@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
+import '../css/ActivityDetail.css'
 
 const ActivityDetail = () => {
   const [activity, setActivity] = useState(null);
@@ -15,9 +16,8 @@ const ActivityDetail = () => {
   if (!activity) return null;
 
   return (
-    <div>
-      <p>I am ActivityDetail inside ActivityFeed</p>
-      {/* <h1>{activity}</h1> */}
+    <div className="call-detail">
+      I am ActivityDetail inside ActivityFeed
       <p>Number of calls: {activity.length}</p>
       <p>Call type: {activity[0].call_type}</p>
       <p>Created at: {activity[0].created_at}</p>
