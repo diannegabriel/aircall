@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import Tabs from 'react-bootstrap/Tabs'
-// import Tab from 'react-bootstrap/Tab'
 
 import ActivityDetail from './ActivityDetail.jsx';
 import 'react-tabs/style/react-tabs.css';
 import '../css/ActivityFeed.css'
 
-const ActivityFeed = ({ setStatus }) => {
+const ActivityFeed = ({ activity, setActivity, setStatus }) => {
   const handleStatusChange = (e) => {
     console.log(e)
     setStatus(e)
@@ -22,6 +20,10 @@ const ActivityFeed = ({ setStatus }) => {
 
       <TabPanel>
         <h2>All Calls</h2>
+        <ActivityDetail 
+          activity={activity}
+          setActivity={setActivity}
+        />
       </TabPanel>
       <TabPanel>
         <div className="archive-calls">
