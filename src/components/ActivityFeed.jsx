@@ -7,12 +7,7 @@ import '../css/ActivityFeed.css'
 
 const ActivityFeed = () => {
   return (
-    <Fragment>
-      {/* <div className="archive-calls">
-        <span className="iconify archive-icon" data-icon="fluent:archive-24-regular" data-width="25" data-height="25"></span>
-        <p>Archive all calls</p>
-      </div> */}
-      <Tabs>
+    <Tabs>
           <TabList>
             <Tab>Recent Activities</Tab>
             <Tab>Archived</Tab>
@@ -20,18 +15,22 @@ const ActivityFeed = () => {
           </TabList>
 
           <TabPanel>
-            {/* <ActivityFeed /> */}
-            <h2>Any content 1</h2>
+            <div className="archive-calls">
+              <span className="iconify archive-icon" data-icon="fluent:archive-24-regular" data-width="25" data-height="25"></span>
+              <p>Archive all calls</p>
+            </div>
             <ActivityDetail />
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div className="archive-calls">
+              <span className="iconify archive-icon" data-icon="fluent:archive-24-regular" data-width="25" data-height="25"></span>
+              <p>Unarchive all calls</p>
+            </div>
           </TabPanel>
           <TabPanel>
             <h2>Any content 3</h2>
           </TabPanel>
         </Tabs>
-    </Fragment>
   )
 }
 
