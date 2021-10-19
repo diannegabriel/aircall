@@ -4,10 +4,19 @@ import '../css/ActivityDetail.css'
 const ActivityDetail = ({ activities, activity }) => {
   if (!activities) return null;
 
+  let icon = '';
+  if (activity.call_type === "missed") {
+    icon=<span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
+  } else if (activity.call_type === "answered") {
+    icon=<span class="iconify" data-icon="flat-color-icons:phone" data-width="25" data-height="25" data-rotate="270deg"></span>
+  } else if (activity.call_type === "voicemail") {
+    icon=<span class="iconify" data-icon="flat-color-icons:voicemail" data-width="25" data-height="25"></span>
+  }
+
   return (
     <div className="call-detail">
       <div className="missed-call-icon">
-        <span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
+        {icon}
       </div>
       <div className="missed-call-info">
         <h3>{activity.from}</h3>
