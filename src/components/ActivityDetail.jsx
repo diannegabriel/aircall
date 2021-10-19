@@ -10,8 +10,8 @@ const ActivityDetail = ({ activities, activity }) => {
         <span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
       </div>
       <div className="missed-call-info">
-        {/* <h3>{activities.from}</h3> */}
-        {/* <h4>tried to call on <strong>{activities[0].via}</strong></h4> */}
+        <h3>{activity.from}</h3>
+        <h4>tried to call on <strong>{activity.via}</strong></h4>
       </div>
       <div className="missed-call-time">
         {/* <p>{activities[0].created_at}</p> */}
