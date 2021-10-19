@@ -5,14 +5,13 @@ import ActivityDetail from './ActivityDetail.jsx';
 import 'react-tabs/style/react-tabs.css';
 import '../css/ActivityFeed.css'
 
-const ActivityFeed = ({ activity, setActivity, setStatus }) => {
+const ActivityFeed = ({ activities, setActivities, setStatus }) => {
   const handleStatusChange = (e) => {
-    console.log(e)
-    setStatus(e)
+    setStatus(e);
   }
   return (
     <Tabs onSelect={handleStatusChange}>
-      <TabList >
+      <TabList>
         <Tab>All Calls</Tab>
         <Tab>Missed</Tab>
         <Tab>Archived</Tab>
@@ -21,8 +20,8 @@ const ActivityFeed = ({ activity, setActivity, setStatus }) => {
       <TabPanel>
         <h2>All Calls</h2>
         <ActivityDetail 
-          activity={activity}
-          setActivity={setActivity}
+          activities={activities}
+          setActivities={setActivities}
         />
       </TabPanel>
       <TabPanel>
@@ -30,13 +29,20 @@ const ActivityFeed = ({ activity, setActivity, setStatus }) => {
           <span className="iconify archive-icon" data-icon="fluent:archive-24-regular" data-width="25" data-height="25"></span>
           <p>Archive all calls</p>
         </div>
-        <ActivityDetail />
+        <ActivityDetail 
+          activities={activities}
+          setActivities={setActivities}
+        />
       </TabPanel>
       <TabPanel>
         <div className="archive-calls">
           <span className="iconify archive-icon" data-icon="fluent:archive-24-regular" data-width="25" data-height="25"></span>
           <p>Unarchive all calls</p>
         </div>
+        <ActivityDetail 
+          activities={activities}
+          setActivities={setActivities}
+        />
       </TabPanel>
     </Tabs>
   )

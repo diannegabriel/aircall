@@ -2,8 +2,13 @@ import React from "react";
 import '../css/ActivityDetail.css'
 
 const ActivityDetail = ({ activities }) => {
-  console.log(activities)
-  const calls = 
+  // console.log(activities)
+  // const handleActivities = () => {
+  //   setActivities(activities.map((activity) => {
+  //     // console.log(activity)
+  //     return activity
+  //   }));
+  // }
   if (!activities) return null;
 
   return (
@@ -13,8 +18,8 @@ const ActivityDetail = ({ activities }) => {
         <span className="iconify" data-icon="flat-color-icons:missed-call" data-width="25" data-height="25"></span>
       </div>
       <div className="missed-call-info">
-        <h3>{activities[0].from}</h3>
-        <h4>tried to call on <strong>{activities[0].via}</strong></h4>
+        {/* <h3>{activities.from}</h3> */}
+        {/* <h4>tried to call on <strong>{activities[0].via}</strong></h4> */}
       </div>
       <div className="missed-call-time">
         {/* <p>{activities[0].created_at}</p> */}

@@ -6,25 +6,44 @@ import ActivityFeed from './components/ActivityFeed.jsx';
 import Header from './Header.jsx';
 
 const App = () => {
-  const [activity, setActivity] = useState(null);
+  const [activities, setActivities] = useState([]);
   const [status, setStatus] = useState(0);
+  const [filteredTodos, setFilteredTodos] = useState([]);
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities")
     .then(res => {
       console.log(res.data);
-      setActivity(res.data);
+      setActivities(res.data);
     })
   }, [])
-  // useEffect(() => {
 
-  // }, [])
+  useEffect(() => {
+    const handleFilter = () => {
+      switch(status){
+        case 1:
+          // Missed calls
+          console.log("missed calls")
+          break;
+        case 2:
+          // Archived calls
+          console.log("archived calls")
+          break;
+        default:
+          // All Calls
+          console.log("all calls")
+          break;
+      }
+    }
+    handleFilter();
+  }, [activities, status])
+
   return (
     <div className='container'>
       <Header/>
       <div className="container-view">
       <ActivityFeed 
-        activity={activity}
-        setActivity={setActivity}
+        activities={activities}
+        setActivities={setActivities}
         setStatus={setStatus}
       />
       </div>
