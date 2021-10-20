@@ -7,7 +7,7 @@ import Header from "./Header.jsx";
 
 const App = () => {
   const [activities, setActivities] = useState([]);
-  const [status, setStatus] = useState(0);
+  const [category, setCategory] = useState(0);
   const [filteredActivities, setFilteredActivities] = useState([]);
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities").then((res) => {
@@ -17,7 +17,7 @@ const App = () => {
   }, []);
   useEffect(() => {
     const handleFilter = () => {
-      switch (status) {
+      switch (category) {
         case 1:
           // Archived calls
           setFilteredActivities(
@@ -33,7 +33,7 @@ const App = () => {
       }
     };
     handleFilter();
-  }, [activities, status]);
+  }, [activities, category]);
 
   return (
     <div className="container">
@@ -42,7 +42,7 @@ const App = () => {
         <ActivityFeed
           activities={activities}
           setActivities={setActivities}
-          setStatus={setStatus}
+          setCategory={setCategory}
           filteredActivities={filteredActivities}
           setFilteredActivities={setFilteredActivities}
         />

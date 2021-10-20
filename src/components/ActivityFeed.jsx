@@ -8,14 +8,11 @@ import "../css/ActivityFeed.css";
 const ActivityFeed = ({
   activities,
   setActivities,
-  setStatus,
+  setCategory,
   filteredActivities,
-  setFilteredActivities,
-  archived,
-  setArchived
   }) => {
   const handleStatusChange = (e) => {
-    setStatus(e);
+    setCategory(e);
   };
   const allActivities = filteredActivities.map((activity) => {
     return (
@@ -24,9 +21,6 @@ const ActivityFeed = ({
         activity={activity}
         activities={activities}
         setActivities={setActivities}
-        archived={archived}
-        setArchived={setArchived}
-        setFilteredActivities={setFilteredActivities}
       />
     );
   });
