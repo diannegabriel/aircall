@@ -1,3 +1,7 @@
+## Assignment Submission / Live Demo
+
+Please visit this link to head to the live demo: https://lucid-bhabha-fcb918.netlify.app/
+
 ## Summary
 
 The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but please change whatever you want (CSS files, HTML structure, JS structure, etc).
