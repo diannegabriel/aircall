@@ -12,6 +12,12 @@ footer .iconify {
   cursor: pointer;
 }
 
+footer .iconify:hover{
+  /* text-decoration: underline; */
+  background: linear-gradient(180deg, #23cc6f 3%, #26b164 70%, #05a16d 98%);
+
+}
+
 [data-icon="eva:keypad-fill"] {
   background: linear-gradient(180deg, #23cc6f 3%, #26b164 70%, #05a16d 98%);
   border-radius: 50%;
