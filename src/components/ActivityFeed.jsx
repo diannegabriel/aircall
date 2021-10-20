@@ -3,7 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import ActivityDetail from "./ActivityDetail.jsx";
 import "react-tabs/style/react-tabs.css";
-import "../css/ActivityFeed.css";
 
 const ActivityFeed = ({
   activities,

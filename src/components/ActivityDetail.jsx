@@ -65,15 +65,7 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
         </h5>
       </div>
       <div className="call-detail" onClick={handleArchiveCall}>
-        <div className="call-icon">
-          <span
-          className="iconify"
-          data-icon="fluent:call-dismiss-20-filled"
-          style={{ color: "#BA2800" }}
-          data-width="25"
-          data-height="25"
-        ></span>
-        </div>
+        <div className="call-icon">{icon}</div>
         <div className="call-info">
           <h3>{activity.from}</h3>
           <h4>
