@@ -1,28 +1,28 @@
-import React, { useEffect } from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
 import "../css/ActivityDetail.css";
 
 const ActivityDetail = ({ activity, activities, setActivities }) => {
   const handleArchiveCall = () => {
     axios
-    .post(`https://aircall-job.herokuapp.com/activities/${activity.id}`, {
-      is_archived: !activity.is_archived
-    })
-    .then ((res) => {
-      console.log(res.data);
-      setActivities([
-        ...activities.filter(elem => elem.id !== res.data.id), 
-        res.data
-      ])
-      // activities.sort(function(a, b) {
-      //   var keyA = new Date(a.updated_at),
-      //     keyB = new Date(b.updated_at);
-      //   // Compare the 2 dates
-      //   if (keyA < keyB) return -1;
-      //   if (keyA > keyB) return 1;
-      //   return 0;
-      // });
-    })
+      .post(`https://aircall-job.herokuapp.com/activities/${activity.id}`, {
+        is_archived: !activity.is_archived,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setActivities([
+          ...activities.filter((elem) => elem.id !== res.data.id),
+          res.data,
+        ]);
+        // activities.sort(function(a, b) {
+        //   var keyA = new Date(a.updated_at),
+        //     keyB = new Date(b.updated_at);
+        //   // Compare the 2 dates
+        //   if (keyA < keyB) return -1;
+        //   if (keyA > keyB) return 1;
+        //   return 0;
+        // });
+      });
   };
   let icon = "";
   if (activity.call_type === "missed") {
@@ -57,22 +57,32 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
     );
   }
   const date = new Date(activity.created_at);
-  console.log(date.toLocaleString());
   if (!activities) return null;
   return (
-    <div className="call-detail" onClick={handleArchiveCall}>
-      <div className="call-icon">{icon}</div>
-      <div className="call-info">
-        <h3>{activity.from}</h3>
-        <h4>
-          tried to call on <strong>{activity.via}</strong>
-        </h4>
+    <Fragment>
+      <div className="call-date">
+        <p>
+          {date.toString().slice(4, 7) +
+          '.' + date.toString().slice(7, 10) +
+          ',' + date.toString().slice(10, 15)}
+        </p>
       </div>
-      <div className="call-time">
-        <p>{date.toLocaleString().slice(-11, -6) + date.toLocaleString().slice(-3)}</p>
-        {/* <p>12:34 PM</p> */}
+      <div className="call-detail" onClick={handleArchiveCall}>
+        <div className="call-icon">{icon}</div>
+        <div className="call-info">
+          <h3>{activity.from}</h3>
+          <h4>
+            tried to call on <strong>{activity.via}</strong>
+          </h4>
+        </div>
+        <div className="call-time">
+          <p>
+            {date.toLocaleString().slice(-11, -6) +
+              date.toLocaleString().slice(-3)}
+          </p>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
