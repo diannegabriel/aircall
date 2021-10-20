@@ -10,10 +10,12 @@ const App = () => {
   const [activities, setActivities] = useState([]);
   const [category, setCategory] = useState(0);
   const [filteredActivities, setFilteredActivities] = useState([]);
+  const [load, setLoad] = useState(undefined);
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities").then((res) => {
       console.log(res.data);
       setActivities(res.data);
+      setLoad(true);
     });
   }, []);
   useEffect(() => {
@@ -42,6 +44,9 @@ const App = () => {
     <div className="container">
       <Header />
       <div className="container-view">
+        {!load ? (
+          <p>Loading...</p>
+        ) : ( 
         <ActivityFeed
           activities={activities}
           setActivities={setActivities}
@@ -49,6 +54,7 @@ const App = () => {
           filteredActivities={filteredActivities}
           setFilteredActivities={setFilteredActivities}
         />
+        )}
       </div>
       <Footer />
     </div>
