@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import "../css/ActivityDetail.css";
 
-const ActivityDetail = ({ activities, activity, archived, setArchived }) => {
+const ActivityDetail = ({ activities, setActivities, activity, filteredActivities, setFilteredActivities }) => {
   const handleArchiveCall = () => {
     axios
-      .post(`https://aircall-job.herokuapp.com/activities/${activity.id}`, {
-        is_archived: !activity.is_archived
-      })
-      .then((res) => {
-        console.log(res.data.is_archived);
-        // setArchived(res.data.is_archived)
-      });
+    .post(`https://aircall-job.herokuapp.com/activities/${activity.id}`, {
+      is_archived: !activity.is_archived
+    })
+    .then ((res) => {
+      console.log(res.data);
+      // setActivities([...activities, res.data])
+      setActivities([...activities.filter(elem => elem.id !== res.data.id), res.data])
+    })
+    // return activities
   };
   let icon = "";
   if (activity.call_type === "missed") {

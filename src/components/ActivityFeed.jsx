@@ -7,8 +7,10 @@ import "../css/ActivityFeed.css";
 
 const ActivityFeed = ({
   activities,
+  setActivities,
   setStatus,
   filteredActivities,
+  setFilteredActivities,
   archived,
   setArchived
   }) => {
@@ -21,8 +23,10 @@ const ActivityFeed = ({
         key={activity.id}
         activity={activity}
         activities={activities}
+        setActivities={setActivities}
         archived={archived}
         setArchived={setArchived}
+        setFilteredActivities={setFilteredActivities}
       />
     );
   });
@@ -34,18 +38,7 @@ const ActivityFeed = ({
       </TabList>
 
       <TabPanel>{allActivities}</TabPanel>
-      <TabPanel>
-        <div className="archive-calls">
-          <span
-            className="iconify archive-icon"
-            data-icon="fluent:archive-24-regular"
-            data-width="25"
-            data-height="25"
-          ></span>
-          <p>Unarchive all calls</p>
-        </div>
-        {allActivities}
-      </TabPanel>
+      <TabPanel>{allActivities}</TabPanel>
     </Tabs>
   );
 };
