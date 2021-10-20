@@ -54,6 +54,12 @@ h5 span {
   margin-bottom: 10px;
   cursor: pointer;
   background-color: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.call-detail:hover {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.04), 5px 5px rgba(0, 0, 0, 0.04);
+  transform: scale(1.05);
 }
 
 .call-icon {
