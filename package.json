@@ -1,4 +1,5 @@
 {
+  "homepage": "http://diannegabriel.github.io/aircall",
   "name": "frontend-hiring-challenge",
   "version": "1.0.0",
   "description": "Leap test",
@@ -9,11 +10,14 @@
   "private": false,
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.23.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "react": "16.7.0-alpha.0 - next",
     "react-bootstrap": "^1.6.4",
     "react-dom": "16.7.0-alpha.0 - next",
