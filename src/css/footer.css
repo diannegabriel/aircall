@@ -13,7 +13,7 @@ footer .iconify {
   transition: all 0.1s ease-in-out;
 }
 
-footer .iconify:hover{
+footer .iconify:hover {
   border-bottom: #05a16d 5px solid;
   border-radius: 5px;
 }

@@ -9,12 +9,13 @@ const ActivityFeed = ({
   setActivities,
   setCategory,
   filteredActivities,
-  setLoad
+  setLoad,
 }) => {
   const handleCategoryChange = (e) => {
     setCategory(e);
     setLoad(true);
   };
+
   const allActivities = filteredActivities.map((activity) => {
     return (
       <ActivityDetail
@@ -25,6 +26,7 @@ const ActivityFeed = ({
       />
     );
   });
+  
   return (
     <Tabs onSelect={handleCategoryChange}>
       <TabList>

@@ -15,6 +15,7 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
         ]);
       });
   };
+
   let icon = "";
   if (activity.call_type === "missed") {
     icon = (
@@ -47,6 +48,7 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
       ></span>
     );
   }
+  
   const date = new Date(activity.created_at);
   if (!activities) return null;
   return (
