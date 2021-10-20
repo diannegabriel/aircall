@@ -26,6 +26,8 @@
 
 #app .react-tabs {
   background: rgb(248, 248, 248);
+  height: 500px;
+  overflow: auto;
 }
 
 #app .react-tabs__tab-list {
