@@ -10,16 +10,16 @@ footer {
 
 footer .iconify {
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
 footer .iconify:hover{
-  /* text-decoration: underline; */
-  background: linear-gradient(180deg, #23cc6f 3%, #26b164 70%, #05a16d 98%);
-
+  border-bottom: #05a16d 5px solid;
+  border-radius: 5px;
 }
 
 [data-icon="eva:keypad-fill"] {
-  background: linear-gradient(180deg, #23cc6f 3%, #26b164 70%, #05a16d 98%);
+  background: linear-gradient(180deg, #43e08a 3%, #26b164 70%, #05a16d 98%);
   border-radius: 50%;
   padding: 15px;
 }

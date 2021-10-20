@@ -58,7 +58,7 @@ h5 span {
 }
 
 .call-detail:hover {
-  box-shadow: 5px 5px #94eeb6, 5px 5px #92f5b8;
+  box-shadow: 5px 5px #48db80, 5px 5px #92f5b8;
   transform: scale(1.03);
 }
 
