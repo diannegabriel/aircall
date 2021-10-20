@@ -7,6 +7,7 @@
   top: 0;
   right: 0;
   bottom: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 #app .container {
@@ -47,7 +48,7 @@
 #app .react-tabs__tab--selected {
   background: rgb(248, 248, 248);
   border-color: rgb(230, 230, 230);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #app .react-tabs__tab-panel--selected {
