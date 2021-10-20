@@ -28,12 +28,12 @@ h4 {
   background-color: #fff;
 }
 
-.missed-call-icon {
+.call-icon {
   padding-right: 10px;
   align-self: center;
 }
 
-.missed-call-info {
+.call-info {
   flex-basis: 68%;
   background-image: linear-gradient(
     to bottom,
@@ -45,7 +45,7 @@ h4 {
   background-repeat: repeat-y;
 }
 
-.missed-call-time {
+.call-time {
   align-self: center;
   color: rgb(163, 163, 163);
   padding-left: 5px;

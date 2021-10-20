@@ -10,7 +10,18 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
     })
     .then ((res) => {
       console.log(res.data);
-      setActivities([...activities.filter(elem => elem.id !== res.data.id), res.data])
+      setActivities([
+        ...activities.filter(elem => elem.id !== res.data.id), 
+        res.data
+      ])
+      // activities.sort(function(a, b) {
+      //   var keyA = new Date(a.updated_at),
+      //     keyB = new Date(b.updated_at);
+      //   // Compare the 2 dates
+      //   if (keyA < keyB) return -1;
+      //   if (keyA > keyB) return 1;
+      //   return 0;
+      // });
     })
   };
   let icon = "";
@@ -45,19 +56,21 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
       ></span>
     );
   }
+  const date = new Date(activity.created_at);
+  console.log(date.toLocaleString());
   if (!activities) return null;
   return (
     <div className="call-detail" onClick={handleArchiveCall}>
-      <div className="missed-call-icon">{icon}</div>
-      <div className="missed-call-info">
+      <div className="call-icon">{icon}</div>
+      <div className="call-info">
         <h3>{activity.from}</h3>
         <h4>
           tried to call on <strong>{activity.via}</strong>
         </h4>
       </div>
-      <div className="missed-call-time">
-        {/* <p>{activities[0].created_at}</p> */}
-        <p>12:34 PM</p>
+      <div className="call-time">
+        <p>{date.toLocaleString().slice(-11, -6) + date.toLocaleString().slice(-3)}</p>
+        {/* <p>12:34 PM</p> */}
       </div>
     </div>
   );
