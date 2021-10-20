@@ -22,14 +22,14 @@ const App = () => {
           // Archived calls
           setFilteredActivities(
             activities.filter((activity) => activity.is_archived === true)
-            .sort((a,b)=> (b.updated_at - a.updated_at) ? -1 : 1)
+            .sort((a,b)=> (b.created_at - a.created_at) ? -1 : 1)
           );
           break;
         default:
           // Recent activities
           setFilteredActivities(
             activities.filter((activity) => activity.is_archived === false)
-            .sort((a,b)=> (b.updated_at - a.updated_at) ? -1 : 1)
+            .sort((a,b)=> (b.created_at - a.created_at) ? -1 : 1)
           );
           break;
       }
