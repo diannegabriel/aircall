@@ -4,6 +4,7 @@ import axios from "axios";
 
 import ActivityFeed from "./components/ActivityFeed.jsx";
 import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
 const App = () => {
   const [activities, setActivities] = useState([]);
