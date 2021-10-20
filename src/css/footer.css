@@ -5,3 +5,13 @@ footer {
   align-items: center;
   height: 80px;
 }
+
+footer .iconify {
+  cursor: pointer;
+}
+
+[data-icon="eva:keypad-fill"] {
+  background: linear-gradient(180deg, #23cc6f 3%, #26b164 70%, #05a16d 98%);
+  border-radius: 50%;
+  padding: 15px;
+}
