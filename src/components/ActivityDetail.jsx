@@ -61,11 +61,11 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
   return (
     <Fragment>
       <div className="call-date">
-        <p>
+        <h4><strong>
           {date.toString().slice(4, 7) +
           '.' + date.toString().slice(7, 10) +
           ',' + date.toString().slice(10, 15)}
-        </p>
+        </strong></h4>
       </div>
       <div className="call-detail" onClick={handleArchiveCall}>
         <div className="call-icon">{icon}</div>

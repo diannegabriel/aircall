@@ -38,12 +38,12 @@
 }
 
 #app .react-tabs__tab--selected {
-  background: rgb(251, 251, 251);
+  background: rgb(248, 248, 248);
   border-color: rgb(230, 230, 230);
   font-weight: bold;
 }
 
 #app .react-tabs__tab-panel--selected {
   background: rgb(248, 248, 248);
-  padding: 0px 20px 0px 20px;
+  padding: 10px 20px 0px 20px;
 }
