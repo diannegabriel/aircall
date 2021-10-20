@@ -49,6 +49,7 @@ const App = () => {
           setFilteredActivities={setFilteredActivities}
         />
       </div>
+      <Footer />
     </div>
   );
 };
