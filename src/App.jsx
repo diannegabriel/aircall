@@ -12,6 +12,7 @@ const App = () => {
   const [category, setCategory] = useState(0);
   const [filteredActivities, setFilteredActivities] = useState([]);
   const [load, setLoad] = useState(undefined);
+
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities").then((res) => {
       console.log(res.data);
@@ -19,21 +20,24 @@ const App = () => {
       setLoad(true);
     });
   }, []);
+
   useEffect(() => {
     const handleFilter = () => {
       switch (category) {
         case 1:
           // Archived calls
           setFilteredActivities(
-            activities.filter((activity) => activity.is_archived === true)
-            .sort((a,b)=> (b.created_at - a.created_at) ? -1 : 1)
+            activities
+              .filter((activity) => activity.is_archived === true)
+              .sort((a, b) => (b.created_at - a.created_at ? -1 : 1))
           );
           break;
         default:
           // Recent activities
           setFilteredActivities(
-            activities.filter((activity) => activity.is_archived === false)
-            .sort((a,b)=> (b.created_at - a.created_at) ? -1 : 1)
+            activities
+              .filter((activity) => activity.is_archived === false)
+              .sort((a, b) => (b.created_at - a.created_at ? -1 : 1))
           );
           break;
       }
@@ -47,14 +51,14 @@ const App = () => {
       <div className="container-view">
         {!load ? (
           <Loading />
-        ) : ( 
-        <ActivityFeed
-          activities={activities}
-          setActivities={setActivities}
-          setCategory={setCategory}
-          filteredActivities={filteredActivities}
-          setFilteredActivities={setFilteredActivities}
-        />
+        ) : (
+          <ActivityFeed
+            activities={activities}
+            setActivities={setActivities}
+            setCategory={setCategory}
+            filteredActivities={filteredActivities}
+            setFilteredActivities={setFilteredActivities}
+          />
         )}
       </div>
       <Footer />

@@ -10,7 +10,7 @@ const ActivityFeed = ({
   setActivities,
   setCategory,
   filteredActivities,
-  }) => {
+}) => {
   const handleStatusChange = (e) => {
     setCategory(e);
   };

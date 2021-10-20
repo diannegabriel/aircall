@@ -19,19 +19,23 @@ h4 {
 
 h5 {
   color: rgb(163, 163, 163);
-  width: 100%; 
-  text-align: center; 
+  width: 100%;
+  text-align: center;
   line-height: 0.1em;
-  margin: 10px 0 10px; 
-  background-image: linear-gradient(to right, #939393 23%, rgba(255,255,255,0) 0%);
+  margin: 10px 0 10px;
+  background-image: linear-gradient(
+    to right,
+    #939393 23%,
+    rgba(255, 255, 255, 0) 0%
+  );
   background-position: bottom;
   background-size: 5px 8px;
   background-repeat: repeat-x;
 }
 
-h5 span { 
-  background:rgb(248, 248, 248);
-  padding:0 10px; 
+h5 span {
+  background: rgb(248, 248, 248);
+  padding: 0 10px;
 }
 
 .call-date {

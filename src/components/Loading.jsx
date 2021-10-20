@@ -12,7 +12,7 @@ const defaultOptions = {
 };
 
 const Loading = () => {
-  return <Lottie options={defaultOptions} height={120} width={120} />
+  return <Lottie options={defaultOptions} height={120} width={120} />;
 };
 
 export default Loading;
