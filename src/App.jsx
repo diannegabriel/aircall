@@ -15,7 +15,6 @@ const App = () => {
 
   useEffect(() => {
     axios.get("https://aircall-job.herokuapp.com/activities").then((res) => {
-      console.log(res.data);
       setActivities(res.data);
       setLoad(true);
     });
@@ -58,6 +57,7 @@ const App = () => {
             setCategory={setCategory}
             filteredActivities={filteredActivities}
             setFilteredActivities={setFilteredActivities}
+            setLoad={setLoad}
           />
         )}
       </div>

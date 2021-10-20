@@ -9,7 +9,6 @@ const ActivityDetail = ({ activity, activities, setActivities }) => {
         is_archived: !activity.is_archived,
       })
       .then((res) => {
-        console.log(res.data);
         setActivities([
           ...activities.filter((elem) => elem.id !== res.data.id),
           res.data,

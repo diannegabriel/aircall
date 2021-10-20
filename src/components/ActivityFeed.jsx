@@ -10,9 +10,11 @@ const ActivityFeed = ({
   setActivities,
   setCategory,
   filteredActivities,
+  setLoad
 }) => {
-  const handleStatusChange = (e) => {
+  const handleCategoryChange = (e) => {
     setCategory(e);
+    setLoad(true);
   };
   const allActivities = filteredActivities.map((activity) => {
     return (
@@ -25,7 +27,7 @@ const ActivityFeed = ({
     );
   });
   return (
-    <Tabs onSelect={handleStatusChange}>
+    <Tabs onSelect={handleCategoryChange}>
       <TabList>
         <Tab>Recent Activity</Tab>
         <Tab>Archived</Tab>
