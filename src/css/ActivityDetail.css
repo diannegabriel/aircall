@@ -17,6 +17,19 @@ h4 {
   padding: 0;
 }
 
+h5 {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 10px 0 10px; 
+}
+
+h5 span { 
+  background:#fff; 
+  padding:0 10px; 
+}
+
 .call-date {
   padding: 0px 0px 10px 0px;
   display: flex;

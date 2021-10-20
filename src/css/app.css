@@ -45,5 +45,5 @@
 
 #app .react-tabs__tab-panel--selected {
   background: rgb(248, 248, 248);
-  padding: 10px 20px 0px 20px;
+  padding: 0px 20px 0px 20px;
 }
