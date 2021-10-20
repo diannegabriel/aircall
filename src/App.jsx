@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import axios from "axios";
 
 import ActivityFeed from "./components/ActivityFeed.jsx";
-import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import Header from "./Header.jsx";
+import Loading from "./components/Loading.jsx";
 
 const App = () => {
   const [activities, setActivities] = useState([]);
@@ -45,7 +46,7 @@ const App = () => {
       <Header />
       <div className="container-view">
         {!load ? (
-          <p>Loading...</p>
+          <Loading />
         ) : ( 
         <ActivityFeed
           activities={activities}

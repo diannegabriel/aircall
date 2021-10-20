@@ -17,6 +17,7 @@
     "react": "16.7.0-alpha.0 - next",
     "react-bootstrap": "^1.6.4",
     "react-dom": "16.7.0-alpha.0 - next",
+    "react-lottie": "^1.2.3",
     "react-tabs": "^3.2.2"
   },
   "devDependencies": {
